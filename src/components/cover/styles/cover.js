@@ -3,18 +3,28 @@ import styled from 'styled-components/macro';
 
 export const CoverContainer = styled.div`
   display: flex;
-  position: relative;
-  padding: 60vh 0px 0px 15vw;
+  position: absolute;
+  /* padding: 60% 0px 20vh 15vw; */
   flex-direction: column;
+  top: 60%;
+  left: 15%;
 `;
 
 export const ImageBackground = styled.img`
   position: absolute;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
   opacity: 0.6;
   z-index: 0;
 `;
+
+export const Video = styled.video`
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background: #232a34;
+`
 
 export const Name = styled.h1`
   margin-bottom: 15px;
