@@ -2,6 +2,7 @@ import React from 'react'
 import { Header } from '../components'
 import { navigationBar } from '../constants/navigationBar'
 import { Cover } from '../components'
+import me from '../images/cover_image.JPG'
 
 export function HeaderContainer({ children }) {
   return (
@@ -16,7 +17,7 @@ export function HeaderContainer({ children }) {
           {children}
         </Header.NavigationBar>
 
-        <Cover.ImageBackground src='/images/cover/cover_image.JPG' />
+        <Cover.ImageBackground src={me} />
         <Cover.CoverContainer>
           <Cover.Name>Johnny Lin</Cover.Name>
           <Cover.Description>Coding is my life.</Cover.Description>
