@@ -6,6 +6,7 @@ export const CoverContainer = styled.div`
   position: absolute;
   /* padding: 60% 0px 20vh 15vw; */
   flex-direction: column;
+  align-items: flex-start;
   top: 60%;
   left: 15%;
 `;
@@ -34,11 +35,18 @@ export const Name = styled.h1`
 `;
 
 export const Description = styled.p`
-font-size: 20px;
+  font-size: 20px;
 `;
 
 export const More = styled.button`
-  display: inline-block;
-  color: white;
-  background-color: red;
+  color: currentColor;
+  border: currentColor;
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px 45px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
 `;
