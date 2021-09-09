@@ -13,6 +13,18 @@ export const NavigationBar = styled.div`
   justify-content: flex-end;
   background-color: transparent;
   z-index: 10;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    padding: 0px 50px;
+    padding: 30px 50px 0px;
+    width: 100%;
+    top: ${({ isPressed }) => isPressed ? "0" : "-100%"};;;
+    opacity: ${({ isPressed }) => isPressed ? '100%' : '0'};
+    height: 100%;
+    background: #0d0d0d;
+    transition: 0.3s ease-in-out;
+  }
 `;
 
 export const NavigationBtn = styled.button`
@@ -45,5 +57,15 @@ export const NavigationBtn = styled.button`
 
   &:not(:last-child) {
     margin-right: 20px;
+  }
+
+
+  @media (max-width: 600px) {
+    flex: 1;
+
+    &:not(:last-child) {
+      margin-right: 0px;
+      text-align: center;
+    }
   }
 `;

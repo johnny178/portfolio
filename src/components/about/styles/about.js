@@ -3,8 +3,12 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 80px 0px;
+  padding: 80px 30px;
   align-items: center;
+
+  @media (max-width: 600px) {
+    padding: 30px 30px;
+  }
 `;
 
 export const Content = styled.div`
@@ -15,6 +19,10 @@ export const HeaderPane = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 50px;
+
+  @media (max-width: 600px) {
+  margin-bottom: 40px;
+  }
 `;
 
 export const Bullet = styled.div`
@@ -28,6 +36,10 @@ export const Header = styled.h1`
   text-transform: uppercase;
   font-weight: 500;
   font-size: 29px;
+
+  @media (max-width: 600px) {
+  font-size: 25px;
+  }
 `;
 
 export const Pane = styled.div`
@@ -86,6 +98,7 @@ export const TitleTwo = styled.h2`
   margin-bottom: 20px;
 
   @media (max-width: 600px) {
+    margin-bottom: 40px;
     font-size: 35px;
   }
 `
