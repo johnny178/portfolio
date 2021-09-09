@@ -17,7 +17,7 @@ export default function Home() {
       </FloatingBtn.Container>
       <FloatingBtnContext.Provider value={isPressed}>
         <HeaderContainer>
-          <Cover.Video autoPlay loop muted src={Video} controls={false} type='video/mp4' />
+          <Cover.Video autoPlay playsinline loop muted src={Video} controls={false} type='video/mp4' />
           <Cover.Container>
             <Cover.Name>Johnny Lin</Cover.Name>
             <Cover.Description>Coding is my life.</Cover.Description>

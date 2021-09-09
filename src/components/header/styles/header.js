@@ -5,18 +5,24 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 
-export const NavigationBar = styled.div`
+export const NavigationBar = styled.nav`
   display: flex;
   position: fixed;
   width: 100%;
-  padding: 45px 20% 0px 0px;
+  padding: 40px 20% 10px 0px;
   justify-content: flex-end;
-  background-color: transparent;
+  background: ${({ scrollNav }) => (scrollNav ? '#282631' : 'transparent')};
   z-index: 10;
+  transition: 0.8s background-color ease;
 
+  @media (max-width: 820px) {
+    padding: 40px 0px 10px 0px;
+    justify-content: center;
+  }
+
+  //轉換為sidebar
   @media (max-width: 600px) {
     flex-direction: column;
-    padding: 0px 50px;
     padding: 30px 50px 0px;
     width: 100%;
     top: ${({ isPressed }) => isPressed ? "0" : "-100%"};;;

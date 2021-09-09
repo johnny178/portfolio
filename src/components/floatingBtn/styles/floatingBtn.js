@@ -17,6 +17,10 @@ export const Container = styled.button`
   box-shadow: 0px 1px 3px black;
   cursor: pointer;
   z-index: 20;
+
+  @media (min-width: 600px) {
+    display: none;
+  }
 `;
 
 export const Line = styled.div`
