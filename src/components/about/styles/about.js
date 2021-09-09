@@ -3,16 +3,17 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 80px 30px;
+  padding: 80px 0px;
   align-items: center;
 
   @media (max-width: 600px) {
-    padding: 30px 30px;
+    padding: 30px 0px;
   }
 `;
 
 export const Content = styled.div`
-  max-width: 1000px;
+  /* max-width: 1000px; */
+  max-width: 80%;
 `;
 
 export const HeaderPane = styled.div`

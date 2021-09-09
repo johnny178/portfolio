@@ -1,13 +1,14 @@
 import styled from 'styled-components/macro';
 
-
 export const Container = styled.div`
   display: flex;
   position: absolute;
   flex-direction: column;
+  align-self: flex-end;
   align-items: flex-start;
-  top: 60%;
-  left: 15%;
+  width: 80%;
+  /* top: 60%; */
+  bottom: 20%;
 `;
 
 export const ImageBackground = styled.img`
