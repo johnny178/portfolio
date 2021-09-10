@@ -7,7 +7,6 @@ export const Container = styled.div`
   align-self: flex-end;
   align-items: flex-start;
   width: 80%;
-  /* top: 60%; */
   bottom: 20%;
 `;
 
@@ -33,7 +32,7 @@ export const Name = styled.h1`
   text-transform: uppercase;
 
   @media (max-width: 600px) {
-    font-size: 35px;
+    font-size: 45px;
     margin-bottom: 10px;
   }
 `;
@@ -42,7 +41,7 @@ export const Description = styled.p`
   font-size: 20px;
 
   @media (max-width: 600px) {
-    font-size: 15px;
+    font-size: 17px;
   }
 `;
 
@@ -59,7 +58,7 @@ export const More = styled.button`
   cursor: pointer;
 
   @media (max-width: 600px) {
-    font-size: 10px;
+    font-size: 12px;
     padding: 5px 30px;
     margin-top: 15px;
   }

@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import { FloatingBtnContext } from '../context/floatingBtn/floatingBtn';
 import { HeaderContainer } from '../containers/header';
 import { AboutContainer } from '../containers/about';
+import { SkillContainer } from '../containers/skill';
 import { Cover, FloatingBtn } from '../components';
 import Video from '../videos/video.mp4';
-
-
 
 export default function Home() {
   const [isPressed, setIsPressed] = useState(false);
@@ -26,6 +25,7 @@ export default function Home() {
         </HeaderContainer>
       </FloatingBtnContext.Provider>
       <AboutContainer />
+      <SkillContainer />
     </>
   );
 }

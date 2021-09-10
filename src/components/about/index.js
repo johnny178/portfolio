@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Content, HeaderPane, Bullet, Header, Image, Pane, TitlePane, TitleOne, TitleTwo, Article, ArticlePane } from '../../components/about/styles/about'
+import { Container, Content, Image, Pane, TitlePane, TitleOne, TitleTwo, Article, ArticlePane } from '../../components/about/styles/about'
 
 
 export default function About({ children }) {
@@ -12,18 +12,6 @@ About.Container = function AboutContainer({ children, ...restProps }) {
 
 About.Content = function AboutContent({ children, ...restProps }) {
   return <Content {...restProps}>{children}</Content>
-}
-
-About.HeaderPane = function AboutHeaderPane({ children, ...restProps }) {
-  return <HeaderPane {...restProps}>{children}</HeaderPane>
-}
-
-About.Bullet = function AboutBullet({ ...restProps }) {
-  return <Bullet {...restProps} />
-}
-
-About.Header = function AboutHeader({ ...restProps }) {
-  return <Header {...restProps} />
 }
 
 About.Pane = function AboutPane({ children, ...restProps }) {

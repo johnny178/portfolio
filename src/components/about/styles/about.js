@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 80px 0px;
+  padding: 70px 0px;
   align-items: center;
 
   @media (max-width: 600px) {
@@ -12,35 +12,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  /* max-width: 1000px; */
   max-width: 80%;
-`;
-
-export const HeaderPane = styled.div`
-  display: flex;
-  align-items: center;
-  margin-bottom: 50px;
-
-  @media (max-width: 600px) {
-  margin-bottom: 40px;
-  }
-`;
-
-export const Bullet = styled.div`
-  background-color: #fff;
-  width: 55px;
-  height: 20px;
-  margin-right: 30px;
-`;
-
-export const Header = styled.h1`
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 29px;
-
-  @media (max-width: 600px) {
-  font-size: 25px;
-  }
 `;
 
 export const Pane = styled.div`

@@ -1,5 +1,6 @@
 import React from 'react'
 import { About } from '../components'
+import { BlockTitle } from '../components';
 import Selfie from '../images/selfie.jpg'
 
 export function AboutContainer() {
@@ -7,10 +8,7 @@ export function AboutContainer() {
     <About>
       <About.Container>
         <About.Content>
-          <About.HeaderPane>
-            <About.Bullet />
-            <About.Header >about</About.Header>
-          </About.HeaderPane>
+          <BlockTitle title={'about'} />
           <About.Pane>
             <About.Image src={Selfie} />
             <About.ArticlePane>
