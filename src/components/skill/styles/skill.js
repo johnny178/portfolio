@@ -44,6 +44,7 @@ export const ProgressBar = styled.div`
   width: 100%;
   height: 50px;
   margin-top: 2em;
+  padding-right: 1em;
   background-color: #30303E;
 `;
 
