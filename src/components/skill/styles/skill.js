@@ -18,7 +18,7 @@ export const Content = styled.div`
 export const Row = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-  grid-gap: 10px;
+  grid-gap: 2.5em 2.2em;
 `;
 
 export const Block = styled.div`
@@ -27,9 +27,11 @@ export const Block = styled.div`
 `;
 
 export const Title = styled.h2`
-  color: orange;
-  font-weight: 500;
+  color: ${({ color }) => color};
+  font-weight: 700;
+  font-size: 1.2em;
   text-transform: uppercase;
+  margin-bottom: 0.8em;
 `;
 
 export const Paragraph = styled.p`
@@ -37,12 +39,22 @@ export const Paragraph = styled.p`
 `;
 
 export const ProgressBar = styled.div`
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 50px;
-
-  background-color: red;
+  margin-top: 2em;
+  background-color: #30303E;
 `;
 
-export const Progress = styled.div``;
+export const Progress = styled.div`
+  height: 100%;
+  width: ${({ percent }) => percent}%;
+  background-color: ${({ color }) => color};
+`;
 
-export const PercentText = styled.p``;
+export const PercentText = styled.p`
+  margin-left: 1em;
+  color: ${({ color }) => color};
+  font-weight: 700;
+`;

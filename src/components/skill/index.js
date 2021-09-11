@@ -30,8 +30,13 @@ Skill.Paragraph = function SkillParagraph({ ...restProps }) {
 }
 
 //進度條
-Skill.ProgressBar = function SkillProgressBar({ children, ...restProps }) {
-  return <ProgressBar {...restProps}>{children}</ProgressBar>;
+Skill.ProgressBar = function SkillProgressBar({ ...restProps }) {
+  return (
+    <ProgressBar {...restProps}>
+      <Skill.Progress {...restProps} />
+      <Skill.PercentText {...restProps} >{restProps.percent}%</Skill.PercentText>
+    </ProgressBar>
+  )
 }
 
 Skill.Progress = function SkillProgress({ ...restProps }) {

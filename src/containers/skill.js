@@ -1,38 +1,26 @@
 import React from 'react'
 import { Skill } from '../components';
 import { BlockTitle } from '../components';
+import { skillData } from '../constants/skill';
 
 export function SkillContainer() {
   return (
     <Skill>
       <Skill.Frame>
         <Skill.Content>
-          <BlockTitle title={'skills'} />
+          <BlockTitle title={'s k i l l s'} />
           <Skill.Row>
-            <Skill.Block>
-              <Skill.Title>graphic design</Skill.Title>
-              <Skill.Paragraph>
-                Vivamus accumsan eget mi quis iaculis. Integer<br /><br />
-                tristique cursus sapien, sit amet porttitor neque<br /><br />
-                imperdiet a. Morbi ut dui vehicula, elementum est
-              </Skill.Paragraph>
-            </Skill.Block>
-            <Skill.Block>
-              <Skill.Title>graphic design</Skill.Title>
-              <Skill.Paragraph>
-                Vivamus accumsan eget mi quis iaculis. Integer<br /><br />
-                tristique cursus sapien, sit amet porttitor neque<br /><br />
-                imperdiet a. Morbi ut dui vehicula, elementum est
-              </Skill.Paragraph>
-            </Skill.Block>
-            <Skill.Block>
-              <Skill.Title>graphic design</Skill.Title>
-              <Skill.Paragraph>
-                Vivamus accumsan eget mi quis iaculis. Integer<br /><br />
-                tristique cursus sapien, sit amet porttitor neque<br /><br />
-                imperdiet a. Morbi ut dui vehicula, elementum est
-              </Skill.Paragraph>
-            </Skill.Block>
+            {skillData.map(item => (
+              <Skill.Block key={item.id}>
+                <Skill.Title color={item.color}>{item.name}</Skill.Title>
+                <Skill.Paragraph>
+                  {item.content.map(item => (
+                    <>{item}<br /></>
+                  ))}
+                </Skill.Paragraph>
+                <Skill.ProgressBar color={item.color} percent={item.percent} />
+              </Skill.Block>
+            ))}
           </Skill.Row>
         </Skill.Content>
       </Skill.Frame>
