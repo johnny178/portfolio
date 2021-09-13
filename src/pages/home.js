@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { FloatingBtnContext } from '../context/floatingBtn/floatingBtn';
+
 import { HeaderContainer } from '../containers/header';
 import { AboutContainer } from '../containers/about';
 import { SkillContainer } from '../containers/skill';
+import { ExperienceContainer } from '../containers/experience';
+
 import { Cover, FloatingBtn } from '../components';
+import { FloatingBtnContext } from '../context/floatingBtn/floatingBtn';
 import Video from '../videos/video.mp4';
 
 export default function Home() {
@@ -15,7 +18,7 @@ export default function Home() {
         <FloatingBtn.Line />
       </FloatingBtn.Container>
       <FloatingBtnContext.Provider value={isPressed}>
-        <HeaderContainer>
+        <HeaderContainer onClick={() => setIsPressed(!isPressed)}>
           <Cover.Video autoPlay preload playsinline loop muted poster="" src={Video} controls={false} type='video/mp4' />
           <Cover.Container>
             <Cover.Name>Johnny Lin</Cover.Name>
@@ -26,6 +29,7 @@ export default function Home() {
       </FloatingBtnContext.Provider>
       <AboutContainer />
       <SkillContainer />
+      <ExperienceContainer />
     </>
   );
 }

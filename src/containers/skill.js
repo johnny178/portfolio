@@ -1,12 +1,12 @@
 import React from 'react'
 import { Skill } from '../components';
 import { BlockTitle } from '../components';
-import { skillData } from '../constants/skill';
+import { skillData } from '../constants/pageData';
 
 export function SkillContainer() {
   return (
     <Skill>
-      <Skill.Frame>
+      <Skill.Frame id='skills'>
         <Skill.Content>
           <BlockTitle title={'s k i l l s'} />
           <Skill.Row>

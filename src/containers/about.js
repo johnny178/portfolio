@@ -6,7 +6,7 @@ import Selfie from '../images/selfie.jpg'
 export function AboutContainer() {
   return (
     <About>
-      <About.Container>
+      <About.Container id='about'>
         <About.Content>
           <BlockTitle title={'a b o u t'} />
           <About.Pane>

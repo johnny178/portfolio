@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import { Link as LinkSroll } from 'react-scroll';
 
 export const Container = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ export const NavigationBar = styled.nav`
   display: flex;
   position: fixed;
   width: 100%;
-  padding: 40px 20% 10px 0px;
+  padding: 40px 20% 0px 0px;
   justify-content: flex-end;
   background: ${({ scrollNav }) => (scrollNav ? '#282631' : 'transparent')};
   z-index: 10;
@@ -33,7 +34,7 @@ export const NavigationBar = styled.nav`
   }
 `;
 
-export const NavigationBtn = styled.button`
+export const NavigationBtn = styled(LinkSroll)`
   position: relative;
   border: none;
   padding: 0;
@@ -43,21 +44,9 @@ export const NavigationBtn = styled.button`
   font-weight: 500;
   cursor: pointer;
   transition: color 0.2s ease;
+  height: 30px;
 
-  &:focus {
-    color: #899E53;
-    &::after {
-      position: absolute;
-      content: "";
-      top: 120%;
-      left: 0px;
-      width: 100%;
-      height: 3px;
-      background-color: #899E53;
-    }
-  }
-
-  &:hover {
+  &:hover{
     color: #899E53;
   }
 
@@ -65,13 +54,22 @@ export const NavigationBtn = styled.button`
     margin-right: 20px;
   }
 
-
   @media (max-width: 600px) {
+    display: flex;
     flex: 1;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 
     &:not(:last-child) {
       margin-right: 0px;
-      text-align: center;
+    }
+  }
+
+  @media (min-width: 600px){
+    &.active {
+      color: #899E53;
+      border-bottom: 3px solid #899E53;
     }
   }
 `;
