@@ -66,3 +66,5 @@ export const experienceData = [
     id: 1,
   }
 ]
+
+export const portfolioTypes = ['all', 'web', 'react native'];

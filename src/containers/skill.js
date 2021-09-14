@@ -8,7 +8,7 @@ export function SkillContainer() {
     <Skill>
       <Skill.Frame id='skills'>
         <Skill.Content>
-          <BlockTitle title={'s k i l l s'} />
+          <BlockTitle title={'skills'} />
           <Skill.Row>
             {skillData.map(item => (
               <Skill.Block key={item.id}>

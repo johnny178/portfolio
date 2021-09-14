@@ -8,7 +8,7 @@ export function AboutContainer() {
     <About>
       <About.Container id='about'>
         <About.Content>
-          <BlockTitle title={'a b o u t'} />
+          <BlockTitle title={'about'} />
           <About.Pane>
             <About.Image src={Selfie} />
             <About.ArticlePane>

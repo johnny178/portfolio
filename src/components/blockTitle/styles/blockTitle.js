@@ -22,6 +22,7 @@ export const Header = styled.h1`
   font-weight: 500;
   font-size: 29px;
   color: white;
+  letter-spacing: 5px;
 
   @media (max-width: 600px) {
     font-size: 25px;

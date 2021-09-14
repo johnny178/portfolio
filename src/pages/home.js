@@ -8,6 +8,7 @@ import { ExperienceContainer } from '../containers/experience';
 import { Cover, FloatingBtn } from '../components';
 import { FloatingBtnContext } from '../context/floatingBtn/floatingBtn';
 import Video from '../videos/video.mp4';
+import { PortfolioContainer } from '../containers/portfolio';
 
 export default function Home() {
   const [isPressed, setIsPressed] = useState(false);
@@ -23,13 +24,22 @@ export default function Home() {
           <Cover.Container>
             <Cover.Name>Johnny Lin</Cover.Name>
             <Cover.Description>Coding is my life.</Cover.Description>
-            <Cover.More>More</Cover.More>
+            <Cover.More
+              to='about'
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact='true'
+              offset={-80}
+            >More
+            </Cover.More>
           </Cover.Container>
         </HeaderContainer>
       </FloatingBtnContext.Provider>
       <AboutContainer />
       <SkillContainer />
       <ExperienceContainer />
+      <PortfolioContainer />
     </>
   );
 }

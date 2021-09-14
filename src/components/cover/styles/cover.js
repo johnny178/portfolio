@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import { Link as LinkScroll } from 'react-scroll';
 
 export const Container = styled.div`
   display: flex;
@@ -45,7 +46,7 @@ export const Description = styled.p`
   }
 `;
 
-export const More = styled.button`
+export const More = styled(LinkScroll)`
   color: currentColor;
   border: currentColor;
   border-style: solid;

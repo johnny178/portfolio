@@ -8,7 +8,7 @@ export function ExperienceContainer() {
     <Experience>
       <Experience.Container id='experience'>
         <Experience.Content>
-          <BlockTitle title='e x p e r i e n c e' />
+          <BlockTitle title='experience' />
           <Experience.Row>
             {
               experienceData.map(item => (
