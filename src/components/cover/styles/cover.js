@@ -9,6 +9,14 @@ export const Container = styled.div`
   align-items: flex-start;
   width: 80%;
   bottom: 20%;
+
+  @media (max-width: 1200px) {
+    width: 85%;
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 `;
 
 export const ImageBackground = styled.img`

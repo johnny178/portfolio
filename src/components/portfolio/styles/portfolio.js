@@ -7,10 +7,120 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
+  display: flex;
   flex-direction: column;
   width: 80%;
+
+  @media (max-width: 1200px) {
+    width: 85%;
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 `;
 
+export const Pane = styled.div`
+  display: flex;
+`;
+
+export const LeftPane = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-right: 2em;
+  flex: 1;
+`;
+
+export const TitlePane = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const Bullet = styled.div`
+  background-color: ${({ color }) => color};
+  width: 35px;
+  height: 35px;
+  margin-right: 35px;
+
+  @media (max-width: 1000px) {
+    width: 30px;
+    height: 30px;
+    margin-right: 25px;
+  }
+
+  @media (max-width: 600px) {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+  }
+`;
+
+export const Title = styled.text`
+  color: ${({ color }) => color};
+  font-weight: 700;
+  font-size: 1.2em;
+`;
+
+export const Paragraph = styled.p`
+  margin-top: 2em;
+  line-height: 1.5;
+  white-space: pre-line;
+  margin-bottom: 2em;
+`;
+
+export const UnorderedList = styled.ul`
+
+`;
+
+export const List = styled.li`
+  margin-bottom: 1em;
+`;
+
+export const RightPane = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  align-items: center;
+`;
+
+export const Image = styled.img`
+  object-fit: contain;
+  width: 100%;
+`;
+
+export const ButtonPane = styled.div`
+  display: flex;
+`;
+
+export const Button = styled.a`
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px 45px;
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 12px;
+  cursor: pointer;
+  margin-right: ${({ id }) => id === 'demo' ? '2em' : '0px'};
+  transition: all ease 0.2s;
+  text-align: center;
+  align-self: center;
+
+  @media(hover: hover) and (pointer: fine) {
+    &:hover{
+      padding: 8px 40px;
+    /* font-size: 10px; */
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 5px 30px;
+    margin-top: 15px;
+  }
+`;
+
+
+
+/*
 export const SortBar = styled.div`
   display: flex;
   width: 100%;
@@ -28,17 +138,33 @@ export const SortBtn = styled.button`
   cursor: pointer;
   transition: all ease 0.2s;
 
-  &:hover{
-    font-size: 1.1em;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover{
+      color: #fff;
+    }
   }
 `;
 
 export const Collection = styled.div`
   display: grid;;
-  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
+
+  @media (max-width: 1000px){
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px){
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const Works = styled.div`
-  background-color: #ff5d0e;
+  cursor: pointer;
 `;
+
+export const Image = styled.img`
+  object-fit: contain;
+  width: 100%;
+`;
+*/

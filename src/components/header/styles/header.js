@@ -15,7 +15,6 @@ export const NavigationBar = styled.nav`
   background: ${({ scrollNav }) => (scrollNav ? '#282631' : 'transparent')};
   z-index: 10;
   transition: 0.8s background-color ease;
-  font-family: 'Helvetica Neue';
 
   @media (max-width: 820px) {
     padding: 40px 0px 10px 0px;

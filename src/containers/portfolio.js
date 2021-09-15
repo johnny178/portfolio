@@ -1,17 +1,53 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { BlockTitle, Portfolio } from '../components';
-import { portfolioTypes } from '../constants/pageData';
+import { portfolioData } from '../constants/pageData';
 
 export function PortfolioContainer() {
-  const [pressedType, setPressedType] = useState('all');
-  let test = [1, 2, 3, 4, 5, 6, 7, 8];
+  // const [pressedType, setPressedType] = useState('all');
 
   return (
     <Portfolio>
       <Portfolio.Container id='portfolio'>
         <Portfolio.Content>
           <BlockTitle title={'portfolio'} />
-          <Portfolio.SortBar>
+          {
+            portfolioData.map(item => (
+              <Portfolio.Pane key={item.id}>
+                <Portfolio.LeftPane>
+                  <Portfolio.TitlePane>
+                    <Portfolio.Bullet color={item.color} />
+                    <Portfolio.Title color={item.color}>加密貨幣</Portfolio.Title>
+                  </Portfolio.TitlePane>
+                  <Portfolio.Paragraph>{item.content}</Portfolio.Paragraph>
+                  <Portfolio.UnorderedList>
+                    {
+                      item.list.map(content => (
+                        <Portfolio.List key={content}>{`- ${content}`}</Portfolio.List>
+                      ))
+                    }
+                  </Portfolio.UnorderedList>
+                </Portfolio.LeftPane>
+                <Portfolio.RightPane>
+                  <Portfolio.Image src={item.image} />
+                  <Portfolio.ButtonPane>
+                    <Portfolio.Button id='demo'>Demo</Portfolio.Button>
+                    <Portfolio.Button id='github'>Github</Portfolio.Button>
+                  </Portfolio.ButtonPane>
+                </Portfolio.RightPane>
+              </Portfolio.Pane>
+            ))
+          }
+
+        </Portfolio.Content>
+      </Portfolio.Container>
+    </Portfolio>
+  );
+
+  /*
+  let renderWorks = () => {
+    return (
+      <>
+        <Portfolio.SortBar>
             {
               portfolioTypes.map(item => (
                 <Portfolio.SortBtn
@@ -27,13 +63,15 @@ export function PortfolioContainer() {
           </Portfolio.SortBar>
           <Portfolio.Collection>
             {
-              test.map(item => (
-                <Portfolio.Works key={item}>YO</Portfolio.Works>
+            portfolioData.map(item => (
+              <Portfolio.Works key={item}>
+                <Portfolio.Image src={item.image} />
+              </Portfolio.Works>
               ))
             }
           </Portfolio.Collection>
-        </Portfolio.Content>
-      </Portfolio.Container>
-    </Portfolio>
-  );
+      </>
+    )
+  }
+  */
 }

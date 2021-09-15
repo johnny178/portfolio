@@ -1,3 +1,7 @@
+import Test1 from '../images/test1.png'
+// import Test2 from '../images/test2.png'
+// import Test3 from '../images/test3.png'
+
 export const skillData = [
   {
     name: 'web development',
@@ -33,7 +37,7 @@ export const navigationBar = [
 
 export const experienceData = [
   {
-    name: 'Mobile Developer',
+    name: 'React Native Developer',
     time: '2020/2 - Now',
     company: '露天市集國際資訊股份有限公司',
     content: `iOS及Android的APP開發與維護
@@ -67,4 +71,15 @@ export const experienceData = [
   }
 ]
 
-export const portfolioTypes = ['all', 'web', 'react native'];
+// export const portfolioTypes = ['all', 'web', 'react native'];
+
+export const portfolioData = [
+  {
+    id: 'Cryptocurrency',
+    image: Test1,
+    title: '加密貨幣',
+    content: '工作之餘，嘗試刻出不一樣的畫面',
+    list: ['React Native', '折線圖使用XX庫', 'React Native', '折線圖使用XX庫', 'React Native', '折線圖使用XX庫', 'React Native', '折線圖使用XX庫'],
+    color: '#CEDB12'
+  }
+];

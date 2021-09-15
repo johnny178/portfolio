@@ -13,6 +13,14 @@ export const Container = styled.div`
 export const Content = styled.div`
   width: 80%;
   flex-direction: column;
+
+  @media (max-width: 1200px) {
+    width: 85%;
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 `;
 
 export const Row = styled.div`

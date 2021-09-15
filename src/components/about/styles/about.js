@@ -12,7 +12,15 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  max-width: 80%;
+  width: 80%;
+
+  @media (max-width: 1200px) {
+    width: 85%;
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 `;
 
 export const Pane = styled.div`
@@ -77,6 +85,6 @@ export const TitleTwo = styled.h2`
 `
 
 export const Article = styled.p`
-  line-height: 22px;
+  line-height: 1.5;
   margin-bottom: 20px;
 `;

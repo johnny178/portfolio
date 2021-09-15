@@ -9,6 +9,14 @@ export const Container = styled.div`
 export const Content = styled.div`
   flex-direction: column;
   width: 80%;
+
+  @media (max-width: 1200px) {
+    width: 85%;
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 `;
 
 export const Row = styled.div`
@@ -30,17 +38,18 @@ export const Pane = styled.div`
 
   @media (max-width: 1260px) and (min-width: 680px){
     flex-direction: column;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
   }
 
   @media (max-width: 600px) {
     flex-direction: column;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
   }
 `;
 
 export const Title = styled.div`
   display: flex;
+  flex-shrink: 0;
 `;
 
 export const Bullet = styled.div`
@@ -82,20 +91,21 @@ export const Company = styled.h3`
   color: #fff;
   align-self: center;
   font-weight: 700;
+  flex-shrink: 1;
 
   @media (max-width: 1260px) and (min-width: 680px){
     align-self: auto;
-    margin-top: 20px;
+    margin-top: 2em;
   }
 
   @media (max-width: 600px){
     align-self: auto;
-    margin-top: 20px;
+    margin-top: 2em;
   }
 `;
 
 export const Paragraph = styled.p`
-  line-height: 1.4;
+  line-height: 1.5;
   white-space: pre-line;
   align-self: flex-start;
 `;
