@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Contact } from '../components'
 import { BlockTitle } from '../components'
 
-// import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com'
 
 export function ContactContainer() {
   const [nameText, setNameText] = useState('');

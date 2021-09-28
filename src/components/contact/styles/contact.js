@@ -122,7 +122,7 @@ export const Alert = styled.div`
       top: 110vh;
     }
     5% {
-      top: 50vh;
+      top: 40vh;
     }
     20% {
       opacity: 1;
