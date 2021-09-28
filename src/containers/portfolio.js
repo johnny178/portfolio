@@ -3,8 +3,6 @@ import { BlockTitle, Portfolio } from '../components';
 import { portfolioData } from '../constants/pageData';
 
 export function PortfolioContainer() {
-  // const [pressedType, setPressedType] = useState('all');
-
   return (
     <Portfolio>
       <Portfolio.Container id='portfolio'>

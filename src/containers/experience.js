@@ -30,7 +30,6 @@ export function ExperienceContainer() {
           </Experience.Row>
         </Experience.Content>
       </Experience.Container>
-
     </Experience>
   )
 }

@@ -14,7 +14,7 @@ export const NavigationBar = styled.nav`
   justify-content: flex-end;
   background: ${({ scrollNav }) => (scrollNav ? '#282631' : 'transparent')};
   z-index: 10;
-  transition: 0.8s background-color ease;
+  transition: 800ms background-color ease;
 
   @media (max-width: 820px) {
     padding: 40px 0px 10px 0px;
@@ -26,11 +26,11 @@ export const NavigationBar = styled.nav`
     flex-direction: column;
     padding: 30px 50px 0px;
     width: 100%;
-    top: ${({ isPressed }) => isPressed ? "0" : "-100%"};;;
+    top: ${({ isPressed }) => isPressed ? '0%' : '-100%'};
     opacity: ${({ isPressed }) => isPressed ? '100%' : '0'};
     height: 100%;
     background: #0d0d0d;
-    transition: 0.3s ease-in-out;
+    transition: 300ms all ease;
   }
 `;
 
@@ -46,8 +46,10 @@ export const NavigationBtn = styled(LinkSroll)`
   transition: color 0.2s ease;
   height: 30px;
 
-  &:hover{
-    color: #899E53;
+  @media(hover: hover) and (pointer: fine) {
+    &:hover{
+      color: #FFFF6F;
+    }
   }
 
   &:not(:last-child) {
@@ -67,9 +69,11 @@ export const NavigationBtn = styled(LinkSroll)`
   }
 
   @media (min-width: 600px){
+    color: ${({ scrollNav }) => (scrollNav ? '#C7C3C0' : '#2E2E32')};
+
     &.active {
-      color: #899E53;
-      border-bottom: 3px solid #899E53;
+      border-bottom: 3px solid #FFFF6F;
+      color: #FFFF6F;
     }
   }
 `;

@@ -13,11 +13,7 @@ export function SkillContainer() {
             {skillData.map(item => (
               <Skill.Block key={item.id}>
                 <Skill.Title color={item.color}>{item.name}</Skill.Title>
-                <Skill.Paragraph>
-                  {item.content.map(item => (
-                    <>{item}<br /></>
-                  ))}
-                </Skill.Paragraph>
+                <Skill.Paragraph>{item.content}</Skill.Paragraph>
                 <Skill.ProgressBar color={item.color} percent={item.percent} />
               </Skill.Block>
             ))}

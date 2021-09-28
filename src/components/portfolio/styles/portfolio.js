@@ -22,6 +22,10 @@ export const Content = styled.div`
 
 export const Pane = styled.div`
   display: flex;
+
+  @media (max-width: 600px){
+    flex-direction: column;
+  }
 `;
 
 export const LeftPane = styled.div`
@@ -55,7 +59,7 @@ export const Bullet = styled.div`
   }
 `;
 
-export const Title = styled.text`
+export const Title = styled.h1`
   color: ${({ color }) => color};
   font-weight: 700;
   font-size: 1.2em;
@@ -86,6 +90,16 @@ export const RightPane = styled.div`
 export const Image = styled.img`
   object-fit: contain;
   width: 100%;
+  border-radius: 8px;
+
+  @media (min-width: 1000px){
+    width: 80%;
+  }
+
+  @media (max-width: 600px){
+    margin-top: 1.2em;
+    margin-bottom: 1em;
+  }
 `;
 
 export const ButtonPane = styled.div`
@@ -105,16 +119,20 @@ export const Button = styled.a`
   text-align: center;
   align-self: center;
 
+
   @media(hover: hover) and (pointer: fine) {
     &:hover{
-      padding: 8px 40px;
-    /* font-size: 10px; */
+      transform: scale(1.1);
     }
   }
 
   @media (max-width: 600px) {
-    padding: 5px 30px;
+    transform: scale(1.05);
     margin-top: 15px;
+  }
+
+  &:active {
+    transform: scale(0.9);
   }
 `;
 

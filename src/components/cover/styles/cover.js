@@ -26,7 +26,7 @@ export const ImageBackground = styled.img`
   z-index: 0;
 `;
 
-export const Video = styled.video`
+export const Video = styled.img`
   width: 100%;
   height: 100vh;
   -o-object-fit: cover;
@@ -43,6 +43,7 @@ export const Name = styled.h1`
   @media (max-width: 600px) {
     font-size: 45px;
     margin-bottom: 10px;
+    color: white;
   }
 `;
 
@@ -51,6 +52,7 @@ export const Description = styled.p`
 
   @media (max-width: 600px) {
     font-size: 17px;
+    color: white;
   }
 `;
 
@@ -65,10 +67,22 @@ export const More = styled(LinkScroll)`
   font-weight: 700;
   font-size: 12px;
   cursor: pointer;
+  transition: all ease 0.2s;
+
+  @media(hover: hover) and (pointer: fine) {
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
 
   @media (max-width: 600px) {
     font-size: 12px;
     padding: 5px 30px;
     margin-top: 15px;
+    color: white;
   }
 `;

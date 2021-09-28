@@ -5,21 +5,24 @@ import Test1 from '../images/test1.png'
 export const skillData = [
   {
     name: 'web development',
-    content: ['HTML & CSS & Javascript', 'Familiar with React, Context, Redux', 'API connection & Version control'],
+    content: `HTML & CSS & Javascript
+    Familiar with React, Context, Redux
+    API connection & Version control`,
     id: 0,
     color: '#DB7013',
     percent: 80
   },
   {
     name: 'mobile development',
-    content: ['Familiar with React Native', 'iOS development(Swift)'],
+    content: `Familiar with React Native
+    iOS development(Swift)`,
     id: 1,
     color: '#CEDB12',
     percent: 90
   },
   {
     name: 'backend development',
-    content: ['C++ & Python'],
+    content: `C++ & Python`,
     id: 2,
     color: '#33DAA4',
     percent: 70
@@ -79,7 +82,7 @@ export const portfolioData = [
     image: Test1,
     title: '加密貨幣',
     content: '工作之餘，嘗試刻出不一樣的畫面',
-    list: ['React Native', '折線圖使用XX庫', 'React Native', '折線圖使用XX庫', 'React Native', '折線圖使用XX庫', 'React Native', '折線圖使用XX庫'],
+    list: ['React Native', '折線圖使用XX庫'],
     color: '#CEDB12'
   }
 ];

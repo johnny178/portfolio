@@ -6,3 +6,4 @@ export { default as BlockTitle } from './blockTitle';
 export { default as Skill } from './skill';
 export { default as Experience } from './experience';
 export { default as Portfolio } from './portfolio';
+export { default as Contact } from './contact';

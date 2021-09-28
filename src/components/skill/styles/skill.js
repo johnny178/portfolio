@@ -44,6 +44,7 @@ export const Title = styled.h2`
 
 export const Paragraph = styled.p`
   line-height: 20px;
+  white-space: pre-line;
 `;
 
 export const ProgressBar = styled.div`

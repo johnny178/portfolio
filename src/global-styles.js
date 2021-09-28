@@ -84,4 +84,7 @@ export const ResetStyle = createGlobalStyle`
     border: none;
     background: none;
   }
+  input, textarea {
+    all: unset;
+  }
 `;

@@ -59,7 +59,7 @@ export const TitleOne = styled.h2`
 
   &::after {
     content: 'Johnny Lin';
-    color: #9BBA65;
+    color: #FFFF6F;
     font-size: 35px;
     font-weight: 500;
   }
