@@ -14,16 +14,16 @@ export function ContactContainer() {
   function sendEmail(e) {
     e.preventDefault();
 
-    // try {
-    //   emailjs.sendForm(
-    //     'service_e65wmzg',
-    //     'template_rj3j42n',
-    //     e.target,
-    //     'user_08okOcqI2LMxbqIrucxm4');
-    // }
-    // catch (err) {
-    //   err => console.log('send email error', err);
-    // }
+    try {
+      emailjs.sendForm(
+        'service_e65wmzg',
+        'template_rj3j42n',
+        e.target,
+        'user_08okOcqI2LMxbqIrucxm4');
+    }
+    catch (err) {
+      err => console.log('send email error', err);
+    }
 
     setNameText('');
     setEmailText('');
@@ -42,7 +42,7 @@ export function ContactContainer() {
       <Contact.Container id='contact'>
         <Contact.Content>
           <BlockTitle title={'contact'} />
-          <Contact.Form autoComplete="off" onSubmit={sendEmail} /*onAnimationEnd={() => setIsShowAlert(false)}*/>
+          <Contact.Form autoComplete="off" onSubmit={sendEmail}>
             <Contact.LeftPane>
               <Contact.Input type='text' name='name' placeholder='NAME' value={nameText} onChange={e => setNameText(e.target.value)} />
               <Contact.Input type='email' name='user_email' placeholder='E-MAIL' value={emailText} onChange={e => setEmailText(e.target.value)} />
