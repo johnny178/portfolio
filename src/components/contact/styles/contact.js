@@ -115,7 +115,8 @@ export const Alert = styled.div`
   text-align: center;
   left: 50vw;
   transform: translate(-50%, -50%);
-  animation: ${({ isShowAlert }) => isShowAlert ? 'send 7s' : 'none'};
+  animation-name: ${({ isShowAlert }) => isShowAlert && 'send' };
+  animation-duration: 7s;
 
   @keyframes send{
     0% {

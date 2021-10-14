@@ -16,7 +16,6 @@ Header.NavigationBar = function HeaderNavigationBar({ children, ...restProps }) 
 }
 
 Header.NavigationBtn = function HeaderNavigationBtn({ ...restProps }) {
-  console.log(restProps)
   const [isPressed, setIsPressed] = useState(false);
 
   return (
