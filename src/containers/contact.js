@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Contact } from '../components'
 import { BlockTitle } from '../components'
 
@@ -10,6 +10,16 @@ export function ContactContainer() {
   const [phoneText, setPhoneText] = useState('');
   const [messageText, setMessageText] = useState('');
   const [isShowAlert, setIsShowAlert] = useState(false);
+
+  useEffect(() => {
+    const closeAlert = setTimeout(() => {
+      setIsShowAlert(false);
+    }, 3000);
+
+    return () => {
+      clearTimeout(closeAlert);
+    };
+  }, [isShowAlert]);
 
   function sendEmail(e) {
     e.preventDefault();
@@ -32,9 +42,6 @@ export function ContactContainer() {
 
     //顯示完成警示框
     setIsShowAlert(true);
-    setTimeout(() => {
-      setIsShowAlert(false);
-    }, 7000);
   }
 
   return (
@@ -53,7 +60,7 @@ export function ContactContainer() {
               <Contact.Input type='submit' name='send' value='SEND' id='send' />
             </Contact.RightPane>
           </Contact.Form >
-          <Contact.Alert isShowAlert={isShowAlert}>Thanks you!</Contact.Alert>
+          <Contact.Alert isShowAlert={isShowAlert}>Thanks you !</Contact.Alert>
         </Contact.Content>
       </Contact.Container>
     </Contact>

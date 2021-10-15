@@ -116,20 +116,21 @@ export const Alert = styled.div`
   left: 50vw;
   transform: translate(-50%, -50%);
   animation-name: ${({ isShowAlert }) => isShowAlert && 'send' };
-  animation-duration: 7s;
+  animation-duration: 3s;
 
   @keyframes send{
     0% {
       top: 110vh;
     }
-    5% {
+    20% {
       top: 40vh;
     }
-    20% {
+    50% {
       opacity: 1;
     }
     100% {
       opacity: 0;
+      top: 40vh;
     }
   }
 `;
