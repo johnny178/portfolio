@@ -72,6 +72,10 @@ export const Input = styled.input`
     color: currentColor;
   }
 
+  &:focus:invalid {
+    border: 1px solid red;
+  }
+
   @keyframes send{
     0% {
       border: #33313C 1px solid;
@@ -101,6 +105,10 @@ export const Textarea = styled.textarea`
   &::placeholder {
     letter-spacing: 1.5px;
     color: currentColor;
+  }
+
+  &:focus:invalid {
+    border: 1px solid red;
   }
 
   @media (max-width: 600px) {
