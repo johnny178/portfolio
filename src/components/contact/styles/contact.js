@@ -1,4 +1,4 @@
-import styled from "styled-components/macro";
+import styled from 'styled-components/macro';
 
 export const Container = styled.div`
   display: flex;
@@ -28,7 +28,7 @@ export const Form = styled.form`
 
   @media (max-width: 600px) {
     flex-direction: column;
-  } 
+  }
 `;
 
 export const LeftPane = styled.div`
@@ -55,14 +55,14 @@ export const RightPane = styled.div`
 
 export const Input = styled.input`
   margin-bottom: 1em;
-  border: #33313C 1px solid;
+  border: #33313c 1px solid;
   padding: 0.8em;
-  text-align: ${({ id }) => id === 'send' ? 'center' : 'left'};
+  text-align: ${({ id }) => (id === 'send' ? 'center' : 'left')};
   transition: all 200ms ease;
 
   &:focus {
     border: ${({ id }) => id !== 'send' && '#FFFF6F 1px solid'};
-    animation-name: ${({ id }) => id === 'send' && 'send'};;
+    animation-name: ${({ id }) => id === 'send' && 'send'};
     animation-duration: 0.2s;
     animation-timing-function: ease;
   }
@@ -72,16 +72,16 @@ export const Input = styled.input`
     color: currentColor;
   }
 
-  @keyframes send{
+  @keyframes send {
     0% {
-      border: #33313C 1px solid;
+      border: #33313c 1px solid;
       transform: scale(1);
     }
     50% {
       transform: scale(1.1);
     }
     100% {
-      border: #33313C 1px solid;
+      border: #33313c 1px solid;
       transform: scale(1);
     }
   }
@@ -89,13 +89,13 @@ export const Input = styled.input`
 
 export const Textarea = styled.textarea`
   flex: 1;
-  border: #33313C 1px solid;
+  border: #33313c 1px solid;
   margin-bottom: 1em;
   padding-top: 0.8em;
   padding-left: 1.6em;
 
   &:focus {
-    border: #FFFF6F 1px solid;
+    border: #ffff6f 1px solid;
   }
 
   &::placeholder {
@@ -115,10 +115,10 @@ export const Alert = styled.div`
   text-align: center;
   left: 50vw;
   transform: translate(-50%, -50%);
-  animation-name: ${({ isShowAlert }) => isShowAlert && 'send' };
+  animation-name: ${({ isShowAlert }) => isShowAlert && 'send'};
   animation-duration: 3s;
 
-  @keyframes send{
+  @keyframes send {
     0% {
       top: 110vh;
     }

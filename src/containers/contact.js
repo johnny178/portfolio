@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
-import { Contact } from '../components'
-import { BlockTitle } from '../components'
+import React, { useEffect, useState } from 'react';
+import { Contact } from '../components';
+import { BlockTitle } from '../components';
 
-import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com';
 
 export function ContactContainer() {
   const [nameText, setNameText] = useState('');
@@ -29,10 +29,10 @@ export function ContactContainer() {
         'service_e65wmzg',
         'template_rj3j42n',
         e.target,
-        'user_08okOcqI2LMxbqIrucxm4');
-    }
-    catch (err) {
-      err => console.log('send email error', err);
+        'user_08okOcqI2LMxbqIrucxm4'
+      );
+    } catch (err) {
+      (err) => console.log('send email error', err);
     }
 
     setNameText('');
@@ -46,52 +46,52 @@ export function ContactContainer() {
 
   return (
     <Contact>
-      <Contact.Container id='contact'>
+      <Contact.Container id="contact">
         <Contact.Content>
           <BlockTitle title={'contact'} />
           <Contact.Form autoComplete="off" onSubmit={sendEmail}>
             <Contact.LeftPane>
               <Contact.Input
-                type='text'
-                name='name'
-                placeholder='NAME'
+                type="text"
+                name="name"
+                placeholder="NAME"
                 value={nameText}
                 required="required"
                 minlength="2"
-                onChange={e => setNameText(e.target.value)}
+                onChange={(e) => setNameText(e.target.value)}
               />
               <Contact.Input
-                type='email'
-                name='user_email'
-                placeholder='E-MAIL'
+                type="email"
+                name="user_email"
+                placeholder="E-MAIL"
                 value={emailText}
                 required="required"
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
-                onChange={e => setEmailText(e.target.value)}
+                onChange={(e) => setEmailText(e.target.value)}
               />
               <Contact.Input
-                type='text'
-                name='phone'
-                placeholder='PHONE (Optional)'
+                type="text"
+                name="phone"
+                placeholder="PHONE (Optional)"
                 value={phoneText}
-                onChange={e => setPhoneText(e.target.value)}
+                onChange={(e) => setPhoneText(e.target.value)}
               />
             </Contact.LeftPane>
             <Contact.RightPane>
               <Contact.Textarea
-                placeholder='MESSAGE'
-                name='message'
+                placeholder="MESSAGE"
+                name="message"
                 value={messageText}
                 required="required"
                 minlength="2"
-                onChange={e => setMessageText(e.target.value)}
+                onChange={(e) => setMessageText(e.target.value)}
               />
-              <Contact.Input type='submit' name='send' value='SEND' id='send' />
+              <Contact.Input type="submit" name="send" value="SEND" id="send" />
             </Contact.RightPane>
-          </Contact.Form >
+          </Contact.Form>
           <Contact.Alert isShowAlert={isShowAlert}>Thanks you !</Contact.Alert>
         </Contact.Content>
       </Contact.Container>
     </Contact>
-  )
+  );
 }
