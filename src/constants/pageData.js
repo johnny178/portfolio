@@ -22,7 +22,7 @@ export const skillData = [
   },
   {
     name: 'backend development',
-    content: `C++ & Python`,
+    content: 'C++ & Python',
     id: 2,
     color: '#33DAA4',
     percent: 70
