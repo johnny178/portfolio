@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 70px 0px 250px;
+  padding: 70px 0px 100px;
   align-items: center;
 
   @media (max-width: 600px) {

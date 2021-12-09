@@ -3,7 +3,10 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  padding-bottom: 40px;
+  
+  @media (max-width: 600px) {
+    padding-bottom: 40px;
+  }
 `;
 
 export const Content = styled.div`
@@ -22,10 +25,16 @@ export const Content = styled.div`
 
 export const Pane = styled.div`
   display: flex;
-  margin-bottom: 5%;
+  &:not(:last-child){
+    margin-bottom: 5%;
+  }
 
   @media (max-width: 600px){
     flex-direction: column;
+    
+    &:not(:last-child){
+      margin-bottom: 15%;
+    }
   }
 `;
 
