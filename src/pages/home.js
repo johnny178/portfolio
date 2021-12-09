@@ -9,14 +9,9 @@ import { PortfolioContainer } from '../containers/portfolio';
 
 import { Cover, FloatingBtn } from '../components';
 import { FloatingBtnContext } from '../context/floatingBtn/floatingBtn';
-import { useWindowDimensions } from '../hooks';
-
-// import Video from '../videos/video.mp4';
-import CodingLandscape from '../images/coding-landscape.jpg'
-import CodingPortrait from '../images/coding-portrait.jpg'
+import { getCoverImage } from '../constants/pageData';
 
 export default function Home() {
-  const { width } = useWindowDimensions();
   const [isPressed, setIsPressed] = useState(false);
 
   return (
@@ -26,8 +21,7 @@ export default function Home() {
       </FloatingBtn.Container>
       <FloatingBtnContext.Provider value={isPressed}>
         <HeaderContainer onClick={() => setIsPressed(!isPressed)}>
-          {/* <Cover.Video autoPlay playsinline loop muted poster="" src={Video} controls={false} type='video/mp4' /> */}
-          {width > 600 ? <Cover.Video src={CodingLandscape} /> : <Cover.Video src={CodingPortrait} />}
+          <Cover.Image src={getCoverImage(600)} srcSet={`${getCoverImage(600)} 600w, ${getCoverImage(768)} 768w, ${getCoverImage(1000)} 1000w`} alt={'coverImage'} />
           <Cover.Container>
             <Cover.Name>Johnny Lin</Cover.Name>
             <Cover.Description>Coding is my life.</Cover.Description>

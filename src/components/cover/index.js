@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, ImageBackground, Video, Name, Description, More } from './styles/cover'
+import { Container, ImageBackground, Image, Name, Description, More } from './styles/cover'
 
 export default function Cover({ children }) {
   return children;
@@ -13,8 +13,8 @@ Cover.ImageBackground = function CoverImageBackground({ ...restProps }) {
   return <ImageBackground {...restProps} />
 }
 
-Cover.Video = function CoverVideo({ ...restProps }) {
-  return <Video {...restProps} />
+Cover.Image = function CoverImage({ ...restProps }) {
+  return <Image {...restProps} />
 }
 
 Cover.Name = function CoverName({ ...restProps }) {

@@ -26,12 +26,11 @@ export const ImageBackground = styled.img`
   z-index: 0;
 `;
 
-export const Video = styled.img`
+export const Image = styled.img`
   width: 100%;
   height: 100vh;
   -o-object-fit: cover;
   object-fit: cover;
-  background: #232a34;
 `
 
 export const Name = styled.h1`

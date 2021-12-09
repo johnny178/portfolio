@@ -93,3 +93,7 @@ export const portfolioData = [
     githubUrl: 'https://github.com/johnny178/YoTW'
   }
 ];
+
+export const getCoverImage = width => {
+  return `https://images.unsplash.com/photo-1593062096033-9a26b09da705?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=${width}&q=80`
+}

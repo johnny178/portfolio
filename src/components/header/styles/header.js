@@ -69,7 +69,7 @@ export const NavigationBtn = styled(LinkSroll)`
   }
 
   @media (min-width: 600px){
-    color: ${({ scrollNav }) => (scrollNav ? '#C7C3C0' : '#2E2E32')};
+    color: ${({ scrollNav }) => (scrollNav ? '#C7C3C0' : '#C7C3C0')};
 
     &.active {
       border-bottom: 3px solid #FFFF6F;
