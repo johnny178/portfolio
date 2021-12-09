@@ -1,31 +1,28 @@
-import Test1 from '../images/test1.png'
-// import Test2 from '../images/test2.png'
-// import Test3 from '../images/test3.png'
-
 export const skillData = [
   {
     name: 'web development',
-    content: `HTML & CSS & Javascript
-    Familiar with React, Context, Redux
-    API connection & Version control`,
+    content: `React, Context, Hooks, Redux, Thunk
+    Javascript, TypeScript
+    Styled-Component
+    HTML, CSS
+    API connection, Git Version control`,
     id: 0,
     color: '#DB7013',
-    percent: 80
   },
   {
     name: 'mobile development',
-    content: `Familiar with React Native
+    content: `React Native
     iOS development(Swift)`,
     id: 1,
     color: '#CEDB12',
-    percent: 90
   },
   {
     name: 'backend development',
-    content: 'C++ & Python',
+    content: `C++, Python
+    Firebase
+    `,
     id: 2,
     color: '#33DAA4',
-    percent: 70
   }
 ];
 
@@ -44,18 +41,15 @@ export const experienceData = [
     time: '2020/2 - Now',
     company: '露天市集國際資訊股份有限公司',
     content: `iOS及Android的APP開發與維護
-    主要案⼦有TOTP⼆階段認證APP、通知中⼼⾴、領劵⾴、商品篩選⾴、記錄使⽤者操作⾏為，與現有功能維護。
+    主要參與露天app頁面與元件的開發，像是通知中⼼⾴、領劵⾴、商品篩選⾴...等，以及維護紀錄使用者操作行為的功能。
     
-     - TOTP⼆階段認證APP
+     - TOTP⼆階段認證APP改版專案
      將現有Swift專案改寫為React Native
     1. 抓取伺服器時間矯正錯誤的本機時間、產⽣TOTP驗證碼、掃描QRcode並解析資料 
     2. bridge原⽣code去請求相機權限
     3. 本地化儲存⾦鑰資料
     4. webView相關處理
-    簡易demo: https://youtu.be/z0arXaiMlsg 
-
-    - 通知中⼼⾴
-     串接API顯⽰各種類別的通知資料，下拉刷新，並⽤Redux在有新通知時去更新資料。`,
+    簡易demo: https://youtu.be/z0arXaiMlsg `,
     color: '#CEDB12',
     id: 0,
   },
@@ -74,15 +68,28 @@ export const experienceData = [
   }
 ]
 
-// export const portfolioTypes = ['all', 'web', 'react native'];
-
 export const portfolioData = [
   {
-    id: 'Cryptocurrency',
-    image: Test1,
-    title: '加密貨幣',
-    content: '工作之餘，嘗試刻出不一樣的畫面',
-    list: ['React Native', '折線圖使用XX庫'],
-    color: '#CEDB12'
+    id: 'Taiwan Route',
+    image: 'https://github.com/johnny178/taiwan-route/raw/master/CoverImage.jpg',
+    title: 'Taiwan Route',
+    content: '主要功能: ',
+    feature: ['篩選市區並查詢公車路線', '預估到站時間', '公車GIS動態地圖'],
+    technology: ['React', 'Styled Components', 'React-Router', 'Leaflet'],
+    color: '#CEDB12',
+    demoUrl: 'https://taiwan-route.vercel.app/',
+    githubUrl: 'https://github.com/johnny178/taiwan-route'
+  },
+
+  {
+    id: 'YoTW',
+    image: 'https://github.com/johnny178/YoTW/raw/master/screenshot.jpg',
+    title: 'YoTW - Taiwan Tourist Website',
+    content: '搜尋公車路線並查看動態公車地圖',
+    feature: ['查詢台灣景點、美食、旅宿、活動', '地區篩選查詢', '附近地點推薦', '查看Google map位置'],
+    technology: ['React', 'Styled Components', 'React-Router'],
+    color: '#DB7013',
+    demoUrl: 'https://johnny178.github.io/YoTW/',
+    githubUrl: 'https://github.com/johnny178/YoTW'
   }
 ];

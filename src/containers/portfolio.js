@@ -14,12 +14,20 @@ export function PortfolioContainer() {
                 <Portfolio.LeftPane>
                   <Portfolio.TitlePane>
                     <Portfolio.Bullet color={item.color} />
-                    <Portfolio.Title color={item.color}>加密貨幣</Portfolio.Title>
+                    <Portfolio.Title color={item.color}>{item.title}</Portfolio.Title>
                   </Portfolio.TitlePane>
-                  <Portfolio.Paragraph>{item.content}</Portfolio.Paragraph>
+                  <Portfolio.Paragraph>主要功能 : </Portfolio.Paragraph>
                   <Portfolio.UnorderedList>
                     {
-                      item.list.map(content => (
+                      item.feature.map(content => (
+                        <Portfolio.List key={content}>{`- ${content}`}</Portfolio.List>
+                      ))
+                    }
+                  </Portfolio.UnorderedList>
+                  <Portfolio.Paragraph>使用技術 : </Portfolio.Paragraph>
+                  <Portfolio.UnorderedList>
+                    {
+                      item.technology.map(content => (
                         <Portfolio.List key={content}>{`- ${content}`}</Portfolio.List>
                       ))
                     }
@@ -28,8 +36,8 @@ export function PortfolioContainer() {
                 <Portfolio.RightPane>
                   <Portfolio.Image src={item.image} />
                   <Portfolio.ButtonPane>
-                    <Portfolio.Button id='demo'>Demo</Portfolio.Button>
-                    <Portfolio.Button id='github'>Github</Portfolio.Button>
+                    <Portfolio.Button id='demo' href={item.demoUrl} target='_blank'>Demo</Portfolio.Button>
+                    <Portfolio.Button id='github' href={item.githubUrl} target='_blank'>Github</Portfolio.Button>
                   </Portfolio.ButtonPane>
                 </Portfolio.RightPane>
               </Portfolio.Pane>

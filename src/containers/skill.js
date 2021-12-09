@@ -14,7 +14,6 @@ export function SkillContainer() {
               <Skill.Block key={item.id}>
                 <Skill.Title color={item.color}>{item.name}</Skill.Title>
                 <Skill.Paragraph>{item.content}</Skill.Paragraph>
-                <Skill.ProgressBar color={item.color} percent={item.percent} />
               </Skill.Block>
             ))}
           </Skill.Row>

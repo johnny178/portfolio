@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  padding-bottom: 70px;
+  padding-bottom: 40px;
 `;
 
 export const Content = styled.div`
@@ -22,6 +22,7 @@ export const Content = styled.div`
 
 export const Pane = styled.div`
   display: flex;
+  margin-bottom: 5%;
 
   @media (max-width: 600px){
     flex-direction: column;
@@ -44,7 +45,7 @@ export const Bullet = styled.div`
   background-color: ${({ color }) => color};
   width: 35px;
   height: 35px;
-  margin-right: 35px;
+  margin-right: 5%;
 
   @media (max-width: 1000px) {
     width: 30px;
@@ -62,22 +63,24 @@ export const Bullet = styled.div`
 export const Title = styled.h1`
   color: ${({ color }) => color};
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 1.5em;
 `;
 
-export const Paragraph = styled.p`
-  margin-top: 2em;
+export const Paragraph = styled.h2`
+  margin-top: 1.8em;
   line-height: 1.5;
   white-space: pre-line;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  font-weight: 500;
+  font-size: 1.2rem;
 `;
 
-export const UnorderedList = styled.ul`
-
-`;
+export const UnorderedList = styled.ul``;
 
 export const List = styled.li`
-  margin-bottom: 1em;
+  &:not(:last-child){
+    margin-bottom: 1em;
+  }
 `;
 
 export const RightPane = styled.div`
@@ -97,7 +100,7 @@ export const Image = styled.img`
   }
 
   @media (max-width: 600px){
-    margin-top: 1.2em;
+    margin-top: 2.5em;
     margin-bottom: 1em;
   }
 `;
@@ -118,6 +121,8 @@ export const Button = styled.a`
   transition: all ease 0.2s;
   text-align: center;
   align-self: center;
+  color: #C7C3C0;
+  border-color: #C7C3C0;
 
 
   @media(hover: hover) and (pointer: fine) {
@@ -135,54 +140,3 @@ export const Button = styled.a`
     transform: scale(0.9);
   }
 `;
-
-
-
-/*
-export const SortBar = styled.div`
-  display: flex;
-  width: 100%;
-  margin-bottom: 20px;
-`;
-
-export const SortBtn = styled.button`
-  text-transform: uppercase;
-  color: #B4B3BB;
-  font-weight: 700;
-  flex: ${({ id }) => id.includes('react') ? '2' : '1'};
-  border-bottom: 4px solid ${({ pressedType, id }) => pressedType === id ? '#DD7215' : '#302F3C'};
-  height: 40px;
-  letter-spacing: 3px;
-  cursor: pointer;
-  transition: all ease 0.2s;
-
-  @media (hover: hover) and (pointer: fine) {
-    &:hover{
-      color: #fff;
-    }
-  }
-`;
-
-export const Collection = styled.div`
-  display: grid;;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 30px;
-
-  @media (max-width: 1000px){
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 600px){
-    grid-template-columns: repeat(1, 1fr);
-  }
-`;
-
-export const Works = styled.div`
-  cursor: pointer;
-`;
-
-export const Image = styled.img`
-  object-fit: contain;
-  width: 100%;
-`;
-*/

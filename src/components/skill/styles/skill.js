@@ -6,7 +6,7 @@ export const Container = styled.div`
   padding: 0px 0px 70px;
 
   @media (max-width: 600px) {
-    padding: 0px 0px 30px;
+    padding: 0px 0px 50px;
   }
 `;
 
@@ -43,28 +43,6 @@ export const Title = styled.h2`
 `;
 
 export const Paragraph = styled.p`
-  line-height: 20px;
+  line-height: 1.5;
   white-space: pre-line;
-`;
-
-export const ProgressBar = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  margin-top: 2em;
-  padding-right: 1em;
-  background-color: #30303E;
-`;
-
-export const Progress = styled.div`
-  height: 100%;
-  width: ${({ percent }) => percent}%;
-  background-color: ${({ color }) => color};
-`;
-
-export const PercentText = styled.p`
-  margin-left: 1em;
-  color: ${({ color }) => color};
-  font-weight: 700;
 `;

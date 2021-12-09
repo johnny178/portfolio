@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Content, Row, Block, Title, Paragraph, ProgressBar, Progress, PercentText } from './styles/skill';
+import { Container, Content, Row, Block, Title, Paragraph } from './styles/skill';
 
 export default function Skill({ children }) {
   return children;
@@ -27,22 +27,4 @@ Skill.Title = function SkillTitle({ ...restProps }) {
 
 Skill.Paragraph = function SkillParagraph({ ...restProps }) {
   return <Paragraph {...restProps} />
-}
-
-//進度條
-Skill.ProgressBar = function SkillProgressBar({ ...restProps }) {
-  return (
-    <ProgressBar {...restProps}>
-      <Skill.Progress {...restProps} />
-      <Skill.PercentText {...restProps} >{restProps.percent}%</Skill.PercentText>
-    </ProgressBar>
-  )
-}
-
-Skill.Progress = function SkillProgress({ ...restProps }) {
-  return <Progress {...restProps} />;
-}
-
-Skill.PercentText = function SkillPercentText({ ...restProps }) {
-  return <PercentText {...restProps} />;
 }
