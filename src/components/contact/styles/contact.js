@@ -59,6 +59,7 @@ export const Input = styled.input`
   padding: 0.8em;
   text-align: ${({ id }) => (id === 'send' ? 'center' : 'left')};
   transition: all 200ms ease;
+  cursor: pointer;
 
   &:focus {
     border: ${({ id }) => id !== 'send' && '#FFFF6F 1px solid'};
@@ -70,6 +71,19 @@ export const Input = styled.input`
   &::placeholder {
     letter-spacing: 1.5px;
     color: currentColor;
+  }
+
+  &[value='SEND'] {
+    font-weight: 600;
+    font-size: 1.1rem;
+
+    @media(hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: white;
+        color: #282631;
+        transition: all ease-in-out 0.2s;
+      }
+    }
   }
 
   @keyframes send {

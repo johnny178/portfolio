@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
 
   @media (max-width: 600px) {
-    padding: 30px 0px;
+    padding: 15% 0px;
   }
 `;
 
@@ -86,5 +86,8 @@ export const TitleTwo = styled.h2`
 
 export const Article = styled.p`
   line-height: 1.5;
-  margin-bottom: 20px;
+  
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 `;

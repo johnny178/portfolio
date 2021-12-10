@@ -5,7 +5,7 @@ export const Container = styled.div`
   justify-content: center;
   
   @media (max-width: 600px) {
-    padding-bottom: 40px;
+    padding-bottom: 15%;
   }
 `;
 
@@ -26,7 +26,7 @@ export const Content = styled.div`
 export const Pane = styled.div`
   display: flex;
   &:not(:last-child){
-    margin-bottom: 5%;
+    margin-bottom: 7%;
   }
 
   @media (max-width: 600px){

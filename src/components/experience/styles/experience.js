@@ -3,7 +3,11 @@ import styled from 'styled-components/macro';
 export const Container = styled.div`
   display: flex;
   justify-content: center;
-  padding-bottom: 60px;
+  padding-bottom: 70px;
+
+  @media (max-width: 600px){
+    padding-bottom: 15%;
+  }
 `;
 
 export const Content = styled.div`
