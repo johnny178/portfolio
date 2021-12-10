@@ -48,8 +48,7 @@ export const experienceData = [
     1. 抓取伺服器時間矯正錯誤的本機時間、產⽣TOTP驗證碼、掃描QRcode並解析資料 
     2. bridge原⽣code去請求相機權限
     3. 本地化儲存⾦鑰資料
-    4. webView相關處理
-    簡易demo: https://youtu.be/z0arXaiMlsg `,
+    4. webView相關處理`,
     color: '#CEDB12',
     id: 0,
   },
