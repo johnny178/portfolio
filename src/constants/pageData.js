@@ -1,7 +1,7 @@
 export const skillData = [
   {
     name: 'web development',
-    content: `React, Context, Hooks, Redux, Thunk
+    content: `React, React-Router, Context, Hooks, Redux, Thunk
     Javascript, TypeScript
     Styled-Component
     HTML, CSS
@@ -83,7 +83,7 @@ export const portfolioData = [
   {
     id: 'YoTW',
     image: 'https://github.com/johnny178/YoTW/raw/master/screenshot.jpg',
-    title: 'YoTW - Taiwan Tourist Website',
+    title: 'YoTW',
     content: '搜尋公車路線並查看動態公車地圖',
     feature: ['查詢台灣景點、美食、旅宿、活動', '地區篩選查詢', '附近地點推薦', '查看Google map位置'],
     technology: ['React', 'Styled Components', 'React-Router'],
