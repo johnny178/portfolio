@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable no-undef */
+import React, { useEffect, useState } from 'react';
 
 import { HeaderContainer } from '../containers/header';
 import { AboutContainer } from '../containers/about';
@@ -11,8 +12,17 @@ import { Cover, FloatingBtn } from '../components';
 import { FloatingBtnContext } from '../context/floatingBtn/floatingBtn';
 import { getCoverImage } from '../constants/pageData';
 
+import ReactGA from 'react-ga4';
+
+ReactGA.initialize(process.env.REACT_APP_GA_KEY);
 export default function Home() {
   const [isPressed, setIsPressed] = useState(false);
+
+  useEffect(() => {
+    // console.log(window.location.pathname + window.location.search)
+    // ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.send('pageview');
+  }, []);
 
   return (
     <>
