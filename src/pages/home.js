@@ -19,8 +19,6 @@ export default function Home() {
   const [isPressed, setIsPressed] = useState(false);
 
   useEffect(() => {
-    // console.log(window.location.pathname + window.location.search)
-    // ReactGA.pageview(window.location.pathname + window.location.search);
     ReactGA.send('pageview');
   }, []);
 

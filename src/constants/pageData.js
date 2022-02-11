@@ -37,8 +37,16 @@ export const navigationBar = [
 
 export const experienceData = [
   {
+    name: 'Frontend Developer',
+    time: '2022/02 - Now',
+    company: '三維人股份有限公司 3drens',
+    content: '',
+    color: '#DB7013',
+    id: 0,
+  },
+  {
     name: 'React Native Developer',
-    time: '2020/2 - Now',
+    time: '2020/02 - 2022/02',
     company: '露天市集國際資訊股份有限公司',
     content: `iOS及Android的APP開發與維護
     主要參與露天app頁面與元件的開發，像是通知中⼼⾴、領劵⾴、商品篩選⾴...等，以及維護紀錄使用者操作行為的功能。
@@ -50,11 +58,11 @@ export const experienceData = [
     3. 本地化儲存⾦鑰資料
     4. webView相關處理`,
     color: '#CEDB12',
-    id: 0,
+    id: 1,
   },
   {
     name: 'iOS RD intern',
-    time: '2018/3 - 2018/12',
+    time: '2018/03 - 2018/12',
     company: '精誠資訊 SYSTEX',
     content: `- 開發壽險公司APP專案
       主要處理保單頁面功能，其中包含APP畫面的製作與背後邏輯觸發事件，篩選保單查詢功能、選單tab切換功能、串接API，以及因應不同格式動態顯示的TableView......等，編寫程式語言為Swift。
@@ -63,7 +71,7 @@ export const experienceData = [
       編寫Objective - C修改iPhone X解析度不相容問題，更新元件以符合所需格式。協助專案進行壓力測試以防止記憶體錯誤與程式不正常顯示的發生，建立iOS、Android自動化測試UITest，主要用Swift與JAVA撰寫腳本，讓程式自動去照指定的測試案例去執行，並且驗證畫面的某些數值、驗證頁面是否正確，以節省每次測試所需的人力時間。
     `,
     color: '#33DAA4',
-    id: 1,
+    id: 2,
   }
 ]
 
