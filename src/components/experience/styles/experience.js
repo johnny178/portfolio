@@ -25,8 +25,8 @@ export const Content = styled.div`
 
 export const Row = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
-  grid-gap: 2.5em 2.2em;
+  grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
+  grid-gap: 4em 2.2em;
 `
 
 export const Column = styled.div`
