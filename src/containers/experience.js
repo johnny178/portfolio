@@ -12,7 +12,7 @@ export function ExperienceContainer() {
           <Experience.Row>
             {
               experienceData.map(item => (
-                <Experience.Colunm key={item.id}>
+                <Experience.Column key={item.id}>
                   <Experience.Pane>
                     <Experience.Title>
                       <Experience.Bullet color={item.color} />
@@ -24,7 +24,7 @@ export function ExperienceContainer() {
                     <Experience.Company>{item.company}</Experience.Company>
                   </Experience.Pane>
                   <Experience.Paragraph>{item.content}</Experience.Paragraph>
-                </Experience.Colunm>
+                </Experience.Column>
               ))
             }
           </Experience.Row>

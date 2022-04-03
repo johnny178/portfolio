@@ -29,7 +29,7 @@ export const Row = styled.div`
   grid-gap: 2.5em 2.2em;
 `
 
-export const Colunm = styled.div`
+export const Column = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;

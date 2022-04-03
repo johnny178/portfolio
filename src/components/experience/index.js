@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Content, Row, Colunm, Pane, Title, Bullet, NameTime, CareerName, Time, Company, Paragraph } from './styles/experience'
+import { Container, Content, Row, Column, Pane, Title, Bullet, NameTime, CareerName, Time, Company, Paragraph } from './styles/experience'
 
 export default function Experience({ children }) {
   return children;
@@ -17,8 +17,8 @@ Experience.Row = function ExperienceRow({ children, ...restProps }) {
   return <Row {...restProps}>{children}</Row>
 }
 
-Experience.Colunm = function ExperienceColunm({ children, ...restProps }) {
-  return <Colunm {...restProps}>{children}</Colunm>
+Experience.Column = function ExperienceColumn({ children, ...restProps }) {
+  return <Column {...restProps}>{children}</Column>
 }
 
 Experience.Pane = function ExperiencePane({ children, ...restProps }) {
