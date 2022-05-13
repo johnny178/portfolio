@@ -23,7 +23,20 @@ export function ExperienceContainer() {
                     </Experience.Title>
                     <Experience.Company>{item.company}</Experience.Company>
                   </Experience.Pane>
-                  <Experience.Paragraph>{item.content}</Experience.Paragraph>
+                  {
+                    item.content ?
+                      <Experience.Paragraph>{item.content}</Experience.Paragraph>
+                      :
+                      <Experience.UnorderedList>
+                        {
+                          item.contentList.map(content => (
+                            <div key={content.id} style={{ display: 'flex' }}>
+                              -<Experience.List>{`${content}`}</Experience.List>
+                            </div>
+                          ))
+                        }
+                      </Experience.UnorderedList>
+                  }
                 </Experience.Column>
               ))
             }

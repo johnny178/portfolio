@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Content, Row, Column, Pane, Title, Bullet, NameTime, CareerName, Time, Company, Paragraph } from './styles/experience'
+import { Container, Content, Row, Column, Pane, Title, Bullet, NameTime, CareerName, Time, Company, Paragraph, UnorderedList, List } from './styles/experience'
 
 export default function Experience({ children }) {
   return children;
@@ -51,4 +51,12 @@ Experience.Company = function ExperienceCompany({ ...restProps }) {
 
 Experience.Paragraph = function ExperienceParagraph({ ...restProps }) {
   return <Paragraph {...restProps} />
+}
+
+Experience.UnorderedList = function ExperienceUnorderedList({ ...restProps }) {
+  return <UnorderedList {...restProps} />
+}
+
+Experience.List = function ExperienceList({ ...restProps }) {
+  return <List {...restProps} />
 }

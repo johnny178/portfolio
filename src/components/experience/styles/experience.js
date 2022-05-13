@@ -25,8 +25,24 @@ export const Content = styled.div`
 
 export const Row = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
   grid-gap: 4em 2.2em;
+
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  }
+
+  @media (min-width: 767px) {
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(auto-fit, minmax(30em, 1fr));
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(auto-fit, minmax(35em, 1fr));
+  }
 `
 
 export const Column = styled.div`
@@ -39,11 +55,6 @@ export const Pane = styled.div`
   display: flex;
   width: 100%;
   margin-bottom: 2.5em;
-
-  @media (max-width: 1260px) and (min-width: 680px){
-    flex-direction: column;
-    margin-bottom: 1.5em;
-  }
 
   @media (max-width: 600px) {
     flex-direction: column;
@@ -97,11 +108,6 @@ export const Company = styled.h3`
   font-weight: 700;
   flex-shrink: 1;
 
-  @media (max-width: 1260px) and (min-width: 680px){
-    align-self: auto;
-    margin-top: 2em;
-  }
-
   @media (max-width: 600px){
     align-self: auto;
     margin-top: 2em;
@@ -112,4 +118,12 @@ export const Paragraph = styled.p`
   line-height: 1.5;
   white-space: pre-line;
   align-self: flex-start;
+`;
+
+export const UnorderedList = styled.ol``;
+
+export const List = styled.p`
+  padding-left: 0.3em;
+  line-height: 1.5;
+  margin-bottom: 1em;
 `;

@@ -1,25 +1,24 @@
 export const skillData = [
   {
-    name: 'web development',
-    content: `React, React-Router, Context, Hooks, Redux, Thunk
-    Javascript, TypeScript
-    Styled-Component
-    HTML, CSS
-    API connection, Git Version control`,
+    name: 'React',
+    content: `Hooks / Redux / Rematch
+    Styled Component
+    React Native`,
     id: 0,
     color: '#DB7013',
   },
   {
-    name: 'mobile development',
-    content: `React Native
-    iOS development(Swift)`,
+    name: 'Framework',
+    content: `Material UI
+    Bootstrap`,
     id: 1,
     color: '#CEDB12',
   },
   {
-    name: 'backend development',
-    content: `C++, Python
-    Firebase
+    name: 'Basic',
+    content: `JavaScript / TypeScript: ESNext
+    HTML5: Pug
+    CSS3: SCSS / SASS
     `,
     id: 2,
     color: '#33DAA4',
@@ -38,9 +37,14 @@ export const navigationBar = [
 export const experienceData = [
   {
     name: 'Frontend Developer',
-    time: '2022/02 - Now',
+    time: '2022/02 - 2022/05',
     company: '三維人股份有限公司 3drens',
-    content: '',
+    contentList: [
+      '撰寫CMS管理系統網頁，使用TypeScript + Material UI進行開發，包含管理列表、搜尋篩選、匯出CSV等功能',
+      '導入網頁全站i18n，支援多國語言',
+      '替專案引入React Hook Form套件，減少40%程式碼以及不必要的渲染次數',
+      '設計共用custom hooks給專案使用'
+    ],
     color: '#DB7013',
     id: 0,
   },
@@ -48,15 +52,13 @@ export const experienceData = [
     name: 'React Native Developer',
     time: '2020/02 - 2022/02',
     company: '露天市集國際資訊股份有限公司',
-    content: `iOS及Android的APP開發與維護
-    主要參與露天app頁面與元件的開發，像是通知中⼼⾴、領劵⾴、商品篩選⾴...等，以及維護紀錄使用者操作行為的功能。
-    
-     - TOTP⼆階段認證APP改版專案
-     將現有Swift專案改寫為React Native
-    1. 抓取伺服器時間矯正錯誤的本機時間、產⽣TOTP驗證碼、掃描QRcode並解析資料 
-    2. bridge原⽣code去請求相機權限
-    3. 本地化儲存⾦鑰資料
-    4. webView相關處理`,
+    contentList: [
+      '撰寫露天市集APP，使用React Native進行開發頁面與組件，包含通知中心頁、領券頁、商品篩選等功能',
+      '將原生TOTP二階段APP由Swift改寫為RN併入現有露天APP中，引入需要的新套件進行開發，例如產生TOTP驗證碼、讀取QRcode內容的library',
+      '處理RN 59 to 63升版，替專案引入swipe-list-view套件，解決套件版本不相容的問題',
+      '維護商品搜尋流程，替搜尋頁廣告排序算法更新並優化，刪除30%冗餘程式碼',
+      '替產品埋站上pv, click, impress tracking code'
+    ],
     color: '#CEDB12',
     id: 1,
   },
@@ -66,7 +68,7 @@ export const experienceData = [
     company: '精誠資訊 SYSTEX',
     content: `- 開發壽險公司APP專案
       主要處理保單頁面功能，其中包含APP畫面的製作與背後邏輯觸發事件，篩選保單查詢功能、選單tab切換功能、串接API，以及因應不同格式動態顯示的TableView......等，編寫程式語言為Swift。
-    
+
       - 維護證券APP專案
       編寫Objective - C修改iPhone X解析度不相容問題，更新元件以符合所需格式。協助專案進行壓力測試以防止記憶體錯誤與程式不正常顯示的發生，建立iOS、Android自動化測試UITest，主要用Swift與JAVA撰寫腳本，讓程式自動去照指定的測試案例去執行，並且驗證畫面的某些數值、驗證頁面是否正確，以節省每次測試所需的人力時間。
     `,
