@@ -36,19 +36,6 @@ export const navigationBar = [
 
 export const experienceData = [
   {
-    name: 'Frontend Developer',
-    time: '2022/02 - 2022/05',
-    company: '三維人股份有限公司 3drens',
-    contentList: [
-      '撰寫CMS管理系統網頁，使用TypeScript + Material UI進行開發，包含管理列表、搜尋篩選、匯出CSV等功能',
-      '導入網頁全站i18n，支援多國語言',
-      '替專案引入React Hook Form套件，減少40%程式碼以及不必要的渲染次數',
-      '設計共用custom hooks給專案使用'
-    ],
-    color: '#DB7013',
-    id: 0,
-  },
-  {
     name: 'React Native Developer',
     time: '2020/02 - 2022/02',
     company: '露天市集國際資訊股份有限公司',
@@ -59,7 +46,7 @@ export const experienceData = [
       '維護商品搜尋流程，替搜尋頁廣告排序算法更新並優化，刪除30%冗餘程式碼',
       '替產品埋站上pv, click, impress tracking code'
     ],
-    color: '#CEDB12',
+    color: '#DB7013',
     id: 1,
   },
   {
@@ -72,7 +59,7 @@ export const experienceData = [
       - 維護證券APP專案
       編寫Objective - C修改iPhone X解析度不相容問題，更新元件以符合所需格式。協助專案進行壓力測試以防止記憶體錯誤與程式不正常顯示的發生，建立iOS、Android自動化測試UITest，主要用Swift與JAVA撰寫腳本，讓程式自動去照指定的測試案例去執行，並且驗證畫面的某些數值、驗證頁面是否正確，以節省每次測試所需的人力時間。
     `,
-    color: '#33DAA4',
+    color: '#CEDB12',
     id: 2,
   }
 ]
