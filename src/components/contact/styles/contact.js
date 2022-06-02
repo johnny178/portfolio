@@ -59,7 +59,6 @@ export const Input = styled.input`
   padding: 0.8em;
   text-align: ${({ id }) => (id === 'send' ? 'center' : 'left')};
   transition: all 200ms ease;
-  cursor: pointer;
 
   &:focus {
     border: ${({ id }) => id !== 'send' && '#FFFF6F 1px solid'};
